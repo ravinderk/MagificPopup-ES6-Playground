@@ -41,7 +41,7 @@ class GiveModel {
 		);
 
 		// Set main class.
-		this.config.mainClass = `${this.config.mainClass} popup-fade-slide`.trim();
+		this.config.mainClass = `${this.config.mainClass} modal-fade-slide`.trim();
 
 		// Add support for magnific popup.
 		if ('magnificPopup' === this.config.externalPlugin) {
