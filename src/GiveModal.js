@@ -49,14 +49,14 @@ class GiveModal {
 		let template = '<div class="give-hidden"></div>';
 
 		if (this.config.type.length) {
-			template = `<div class="give-modal give-modal--zoom">
+			template = `<div class="give-modal give-modal--zoom ${ this.config.classes.rowAction ? `${this.config.classes.rowAction}`.trim() : '' }">
 
 				<div class="give-modal__body">
 					${ this.config.popupContent.title ? `<h2 class="give-modal__title">${this.config.popupContent.title}</h2>` : '' }
 					${ this.config.popupContent.desc ? `<p class="give-modal__description">${this.config.popupContent.desc}</p>` : '' }
 				</div>
 	
-				<div class="${ this.config.classes.rowAction ? `${this.config.classes.rowAction} give-modal__controls`.trim() : 'give-modal__controls' }">
+				<div class="give-modal__controls">
 					<button class="give-button give-button--secondary give-popup-close-button">
 						${ this.config.popupContent.cancelBtnTitle ? this.config.popupContent.cancelBtnTitle : ( 'confirm' === this.config.type ? 'Cancel' : 'Close' ) }
 					</button>
@@ -185,7 +185,7 @@ class GiveWarningAlert extends GiveModal {
 	constructor(obj) {
 		obj.type = 'alert';
 		super(obj);
-		this.config.classes.rowAction = 'give-modal--wanring';
+		this.config.classes.rowAction = 'give-modal--warning';
 
 		this.init();
 

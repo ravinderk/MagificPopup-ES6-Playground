@@ -1,3 +1,8 @@
+/**
+ * This sheet contains styles that would animate
+ * Maginfic Popup in a certain way during open and close.
+ */
+
 .mfp-bg,
 .mfp-wrap {
 	position: fixed;
@@ -371,6 +376,35 @@ img.mfp-img {
 	cursor: pointer
 }
 
+.modal-fade-slide .give-modal--zoom {
+	opacity: 0;
+	transition: all 0.2s ease-out;
+	transform: translateY(-20px) perspective( 600px ) rotateX( 10deg );
+}
+
+.modal-fade-slide.mfp-ready .give-modal--zoom {
+	opacity: 1;
+	transform: translateY(0) perspective( 600px ) rotateX( 0 );
+}
+
+.modal-fade-slide.mfp-removing .give-modal--zoom {
+	opacity: 0;
+	transform: translateY(-10px) perspective( 600px ) rotateX( 10deg );
+}
+
+.modal-fade-slide.mfp-bg {
+	opacity: 0;
+	transition: opacity 0.3s ease-out;
+}
+
+.modal-fade-slide.mfp-ready.mfp-bg {
+	opacity: 0.8;
+}
+
+.modal-fade-slide.mfp-removing.mfp-bg {
+	opacity: 0;
+}
+
 @media screen and (max-width:800px) and (orientation:landscape),
 screen and (max-height:300px) {
 	.mfp-img-mobile .mfp-image-holder {
@@ -415,35 +449,6 @@ screen and (max-height:300px) {
 		text-align: center;
 		padding: 0
 	}
-}
-
-.modal-fade-slide .give-modal--zoom {
-	opacity: 0;
-	transition: all 0.2s ease-out;
-	transform: translateY(-20px) perspective( 600px ) rotateX( 10deg );
-}
-
-.modal-fade-slide.mfp-ready .give-modal--zoom {
-	opacity: 1;
-	transform: translateY(0) perspective( 600px ) rotateX( 0 );
-}
-
-.modal-fade-slide.mfp-removing .give-modal--zoom {
-	opacity: 0;
-	transform: translateY(-10px) perspective( 600px ) rotateX( 10deg );
-}
-
-.modal-fade-slide.mfp-bg {
-	opacity: 0;
-	transition: opacity 0.3s ease-out;
-}
-
-.modal-fade-slide.mfp-ready.mfp-bg {
-	opacity: 0.8;
-}
-
-.modal-fade-slide.mfp-removing.mfp-bg {
-	opacity: 0;
 }
 
 @media all and (max-width:900px) {

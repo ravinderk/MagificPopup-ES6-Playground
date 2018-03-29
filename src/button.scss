@@ -1,3 +1,9 @@
+/**
+ * This stylesheet contains styles related to
+ * 2 buttons - blue & gray, that look similar
+ * to the buttons in the admin screen of WordPress.
+ */
+
 .give-button {
 	display: inline-block;
 	height: 30px;
@@ -18,6 +24,11 @@
 		transform: translateY(1px);
 	}
 
+
+
+	/**
+	 * Styles for the 'blue' button.
+	 */
 	&--primary {
 		background: #0085ba;
 		border-color: #0073aa #006799 #006799;
@@ -48,6 +59,11 @@
 		}
 	}
 
+
+
+	/**
+	 * Styles for the 'grey' button.
+	 */
 	&--secondary {
 		color: #555;
 		border-color: #ccc;
