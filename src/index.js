@@ -1,23 +1,11 @@
 import {
-	GiveModel,
 	GiveErrorAlert,
 	GiveWarningAlert,
 	GiveNoticeAlert,
 	GiveSuccessAlert,
-	GiveConfrimModel
-} from './GiveModel';
+	GiveConfirmModal
+} from './GiveModal';
 import './index.scss';
-
-/**
- * Simple Alert
- */
-new GiveModel({
-	triggerSelector: '#Model',
-	popupContent: {
-		title: 'Ravinder',
-		desc: 'this is working fine'
-	}
-});
 
 /**
  * Error Alert
@@ -78,8 +66,8 @@ new GiveNoticeAlert({
  *
  * Confirm Model
  */
-const confirmModel = new GiveConfrimModel({
-	triggerSelector: '#confirmModel',
+const confirmModel = new GiveConfirmModal({
+	triggerSelector: '#confirmModal',
 	popupContent: {
 		title: 'Why?',
 		desc: 'Do you want to test confirm model',
