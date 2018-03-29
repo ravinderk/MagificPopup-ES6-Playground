@@ -244,8 +244,8 @@ class GiveConfirmModal extends GiveModal {
 	 * @private
 	 */
 	static __confirmPopup() {
-		if ('function' === typeof $.magnificPopup.instance.st.successConfrim) {
-			$.magnificPopup.instance.st.successConfrim();
+		if ('function' === typeof $.magnificPopup.instance.st.successConfirm) {
+			$.magnificPopup.instance.st.successConfirm();
 			$.magnificPopup.close();
 		}
 	}
